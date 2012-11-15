@@ -42,3 +42,4 @@ gem "hominid", ">= 3.0.5"
 gem "omniauth", ">= 1.1.1"
 gem "omniauth-facebook"
 gem "simple_form", ">= 2.0.4"
+gem "quiet_assets", ">= 1.0.1", :group => :development
