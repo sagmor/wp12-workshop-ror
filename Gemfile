@@ -35,3 +35,10 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mongoid", ">= 3.0.11"
+gem "bootstrap-sass", ">= 2.1.1.0"
+gem "hominid", ">= 3.0.5"
+gem "omniauth", ">= 1.1.1"
+gem "omniauth-facebook"
+gem "simple_form", ">= 2.0.4"
