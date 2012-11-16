@@ -1,4 +1,7 @@
 TodoApp::Application.routes.draw do
+  resources :todos
+
+
   root :to => "home#index"
   
   get :signin, to: 'sessions#new'

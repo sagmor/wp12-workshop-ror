@@ -1,0 +1,15 @@
+<%= simple_form_for(@todo) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :user_id %>
+    <%= f.input :description %>
+    <%= f.input :due_at %>
+    <%= f.input :done_at %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
