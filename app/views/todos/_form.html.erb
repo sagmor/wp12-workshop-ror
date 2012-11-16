@@ -2,11 +2,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :user_id %>
-    <%= f.input :description %>
-    <%= f.input :due_at %>
-    <%= f.input :done_at %>
+    <%= f.input :title, input_html: {class: 'input-xxlarge'} %>
+    <%= f.input :description, as: :text, input_html: {class: 'input-xxlarge', rows: 5} %>
+    <%= f.input :due_at, as: :datetime, include_blank: true, input_html: {class: 'input-small', rows: 5} %>
   </div>
 
   <div class="form-actions">
