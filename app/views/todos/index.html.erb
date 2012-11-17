@@ -1,27 +1,20 @@
 <h1>Listing todos</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>User</th>
-    <th>Description</th>
-    <th>Due at</th>
-    <th>Done at</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table class="table table-striped table-hover">
+  <col width="20" />
+  <col />
 <% @todos.each do |todo| %>
   <tr>
-    <td><%= todo.title %></td>
-    <td><%= todo.user_id %></td>
-    <td><%= todo.description %></td>
-    <td><%= todo.due_at %></td>
-    <td><%= todo.done_at %></td>
-    <td><%= link_to 'Show', todo %></td>
-    <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-    <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= check_box_tag('') %></td>
+    <td>
+      <strong><%= todo.title %></strong>
+      <% if todo.due_at? %>
+      <span>(<% I18n.l( todo.due_at.to_date, format: :long ) %>)</span>
+      <% end %>
+      <% if todo.description.present? %>
+      <br><small>simple_format(todo.description)</small>
+      <% end %>
+    </td>
   </tr>
 <% end %>
 </table>
