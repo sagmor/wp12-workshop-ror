@@ -5,6 +5,7 @@ class TodosController < ApplicationController
   # GET /todos.json
   def index
     @todos = current_user.todos.pending
+    @todo = current_user.todos.build
 
     respond_to do |format|
       format.html # index.html.erb
