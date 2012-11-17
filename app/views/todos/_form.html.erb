@@ -1,4 +1,4 @@
-<%= simple_form_for(@todo || Todo.new, html:{ class: "form-horizontal" }) do |f| %>
+<%= simple_form_for(@todo || Todo.new, html:{ class: "form-horizontal", style: 'margin:0'}) do |f| %>
   <%= f.error_notification %>
 
   <div class="modal-body">
