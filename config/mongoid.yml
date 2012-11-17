@@ -78,7 +78,7 @@ test:
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
-development:
+production:
   sessions:
     default:
       uri: <%= ENV['MONGOLAB_URI'] %>
