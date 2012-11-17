@@ -1,7 +1,7 @@
 <%= link_to "Todoapp", root_path, :class => 'brand' %>
 
 <span class="pull-right">
-  <%= image_tag current_user.picture, size: '50x50' %>  
+  <%= image_tag current_user.picture, size: '50x50' if current_user %>  
 </span>
 <ul class="nav pull-right">
   <% if user_signed_in? %>
