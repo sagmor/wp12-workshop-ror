@@ -22,7 +22,7 @@ Este es el resultado de mi taller de desarrollo de prototipos en [Webprendedor 2
 * **[Try Git](http://try.github.com/)**: Mini tutorial OnLine de git
 
 ### Heroku
-* **[Sitio](http://www.heroku.com)**:
+* **[Sitio](http://www.heroku.com)**: El sitio Web oficiál del servicio
 
 
 ## License
