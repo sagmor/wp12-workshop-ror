@@ -1,3 +1,14 @@
+/* Paleta basada en http://colorschemedesigner.com/#3qz1Tw0w0w0w0 */
+
+$linkColor: #F5D781;
+$btnPrimaryBackground: #FF5840;
+
+$navbarHeight: 50px;
+$navbarBackground: #1B4065;
+$navbarBackgroundHighlight: #265F77;
+$navbarLinkColor: white;
+$navbarLinkColorHover: #F5D781;
+
 @import "bootstrap";
 body { padding-top: 60px; }
 @import "bootstrap-responsive";
