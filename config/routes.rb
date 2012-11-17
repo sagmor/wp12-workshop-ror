@@ -1,5 +1,10 @@
 TodoApp::Application.routes.draw do
-  resources :todos
+
+  resources :todos do
+    member do
+      match :done
+    end
+  end
 
 
   root :to => "home#index"

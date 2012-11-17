@@ -4,7 +4,7 @@ class TodosController < ApplicationController
   # GET /todos
   # GET /todos.json
   def index
-    @todos = current_user.todos.all
+    @todos = current_user.todos.pending
 
     respond_to do |format|
       format.html # index.html.erb
@@ -77,6 +77,16 @@ class TodosController < ApplicationController
     @todo = current_user.todos.find(params[:id])
     @todo.destroy
 
+    respond_to do |format|
+      format.html { redirect_to todos_url }
+      format.json { head :no_content }
+    end
+  end
+  
+  def done
+    @todo = current_user.todos.find(params[:id])
+    @todo.done!
+    
     respond_to do |format|
       format.html { redirect_to todos_url }
       format.json { head :no_content }

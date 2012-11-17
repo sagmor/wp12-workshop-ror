@@ -6,7 +6,11 @@
   <col />
 <% @todos.each do |todo| %>
   <tr>
-    <td><%= check_box_tag('') %></td>
+    <td>
+      <%= link_to done_todo_path(todo) do %>
+        <i class='icon-check'></i>
+      <% end %>
+    </td>
     <td>
       <strong><%= todo.title %></strong>
       <% if todo.due_at? %>
