@@ -13,6 +13,7 @@ TodoApp::Application.routes.draw do
   get :signout, to: 'sessions#destroy'
   
   get '/auth/facebook/callback', to: 'sessions#create'
+  get '/auth/failure', to: 'sessions#failure'
   
   resources :users
 end
