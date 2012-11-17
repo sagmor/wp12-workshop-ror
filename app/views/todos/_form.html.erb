@@ -1,13 +1,14 @@
-<%= simple_form_for(@todo) do |f| %>
+<%= simple_form_for(@todo || Todo.new, html:{ class: "form-horizontal" }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :title, input_html: {class: 'input-xxlarge'} %>
-    <%= f.input :description, as: :text, input_html: {class: 'input-xxlarge', rows: 5} %>
-    <%= f.input :due_at, as: :datetime, include_blank: true, input_html: {class: 'input-small', rows: 5} %>
+  <div class="modal-body">
+    <%= f.input :title, input_html: {class: 'input-xlarge'} %>
+    <%= f.input :description, as: :text, input_html: {class: 'input-xlarge', rows: 5} %>
+    <%= f.input :due_at, as: :date, include_blank: true, input_html: {class: 'input-small', rows: 5} %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <%= f.button :submit, class: "btn btn-primary" %>
   </div>
 <% end %>
