@@ -1,5 +1,8 @@
 <%= link_to "Todoapp", root_path, :class => 'brand' %>
 
+<span class="pull-right">
+  <%= image_tag current_user.picture, size: '50x50' %>  
+</span>
 <ul class="nav pull-right">
   <% if user_signed_in? %>
     <li class="dropdown">

@@ -20,5 +20,8 @@ class User
       end
     end
   end
-
+  
+  def picture
+    "https://graph.facebook.com/#{uid}/picture"
+  end
 end
