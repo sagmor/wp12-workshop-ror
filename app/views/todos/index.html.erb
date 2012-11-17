@@ -14,10 +14,10 @@
     <td>
       <strong><%= todo.title %></strong>
       <% if todo.due_at? %>
-      <span>(<% I18n.l( todo.due_at.to_date, format: :long ) %>)</span>
+      <span>(<%= I18n.l( todo.due_at.to_date, format: :long ) %>)</span>
       <% end %>
       <% if todo.description.present? %>
-      <br><small>simple_format(todo.description)</small>
+      <br><small><%= simple_format(todo.description) %></small>
       <% end %>
     </td>
   </tr>
